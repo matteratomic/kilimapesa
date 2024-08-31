@@ -1,7 +1,7 @@
 'use client'
 import { LucideArrowUp, LucideBell, LucideDollarSign, LucideFile, LucidePlaySquare, LucidePlus, LucidePlusSquare } from 'lucide-react'
 import React from 'react'
-import { PieChart, Pie, Cell } from 'recharts'
+import { PieChart, Pie, Cell, BarChart, ResponsiveContainer, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar } from 'recharts'
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
@@ -23,6 +23,51 @@ const Dashboard = (props: {}) => {
     { name: 'Group B', value: 300 },
     { name: 'Group C', value: 300 },
     { name: 'Group D', value: 200 },
+  ];
+
+  const data2 = [
+    {
+      name: '21 Aug',
+      earn: 4000,
+      spend: 2400,
+      amt: 2400,
+    },
+    {
+      name: '22 Aug',
+      earn: 3000,
+      spend: 1398,
+      amt: 2210,
+    },
+    {
+      name: '23 Aug',
+      earn: 2000,
+      spend: 9800,
+      amt: 2290,
+    },
+    {
+      name: '24 Aug',
+      earn: 2780,
+      spend: 3908,
+      amt: 2000,
+    },
+    {
+      name: '25 Aug',
+      earn: 1890,
+      spend: 4800,
+      amt: 2181,
+    },
+    {
+      name: '26 Aug',
+      earn: 2390,
+      spend: 3800,
+      amt: 2500,
+    },
+    {
+      name: '27 Aug',
+      earn: 3490,
+      spend: 4300,
+      amt: 2100,
+    },
   ];
   return (
     <div className="bg-slate-200 relative flex h-screen space-x-4">
@@ -127,7 +172,27 @@ const Dashboard = (props: {}) => {
         </div>
 
         <div className="bg-white shadow-md rounded-2xl w-full flex-1 mt-4">
-          Hello
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart
+              width={500}
+              height={300}
+              data={data2}
+              margin={{
+                top: 20,
+                right: 30,
+                left: 20,
+                bottom: 5,
+              }}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis yAxisId="left" orientation="left" stroke="#FFBB28" />
+              <YAxis yAxisId="right" orientation="right" stroke="#F59E0B" />
+              <Tooltip />
+              <Legend />
+              <Bar yAxisId="left" dataKey="spend" fill="#FFBB28" />
+              <Bar yAxisId="right" dataKey="earn" fill="#F59E0B" />
+            </BarChart>
+          </ResponsiveContainer>
         </div>
       </div>
       <div className="relative rounded-lg bg-white h-full min-w-80 p-8">
