@@ -1,5 +1,9 @@
+'use client'
 import { LucideArrowUp, LucideBell, LucideDollarSign, LucideFile, LucidePlaySquare, LucidePlus, LucidePlusSquare } from 'lucide-react'
 import React from 'react'
+import { PieChart, Pie, Cell } from 'recharts'
+
+const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
 const SectionItem = ({ active, text }: { active?: boolean, text: string }) => {
   return <div className="cursor-pointer text-gray-400 flex space-x-2 bg-purple-0300 p-6 pl-3 relative h-16">
@@ -14,6 +18,12 @@ const SectionItem = ({ active, text }: { active?: boolean, text: string }) => {
 }
 
 const Dashboard = (props: {}) => {
+  const data = [
+    { name: 'Group A', value: 400 },
+    { name: 'Group B', value: 300 },
+    { name: 'Group C', value: 300 },
+    { name: 'Group D', value: 200 },
+  ];
   return (
     <div className="bg-slate-200 relative flex h-screen space-x-4">
       <div className="relative p-8 pr-0 h-full w-1/6">
@@ -74,13 +84,31 @@ const Dashboard = (props: {}) => {
               3.14%
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center bg-white shadow-md w-1/2 h-full rounded-2xl">
+          <div className="relative flex flex-col items-center justify-center bg-white shadow-md w-1/2 h-full rounded-2xl">
             <p className="text-sm text-gray-800 font-semibold">Expenses</p>
-            <p className="text-4xl font-bold text-gray-800 my-4"><span className="text-lg">KES</span> 23,502</p>
+            <p className="text-4xl font-bold text-gray-800 my-4"><span className="text-lg">KES</span> 13,102</p>
             <div className="flex items-center justify-center bg-green-100 font-bold text-sm text-green-600 rounded-2xl p-1 px-2">
               <LucideArrowUp className="w-4 h-4 text-green-600 shrink-0" />
               3.14%
             </div>
+            {/* <PieChart width={800} height={400}  */}
+            {/*   // onMouseEnter={this.onPieEnter} */}
+            {/* > */}
+            {/*   <Pie */}
+            {/*     data={data} */}
+            {/*     cx={120} */}
+            {/*     cy={200} */}
+            {/*     innerRadius={60} */}
+            {/*     outerRadius={80} */}
+            {/*     fill="#8884d8" */}
+            {/*     paddingAngle={5} */}
+            {/*     dataKey="value" */}
+            {/*   > */}
+            {/*     {data.map((entry, index) => ( */}
+            {/*       <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} /> */}
+            {/*     ))} */}
+            {/*   </Pie> */}
+            {/* </PieChart> */}
           </div>
         </div>
 
