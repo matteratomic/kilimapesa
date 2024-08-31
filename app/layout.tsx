@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import localFont from 'next/font/local'
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,11 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${arcane.variable}`}>
-        <div className="flex w-full items-center justify-between bg-slate-100 px-8 py-4">
-
+      <body style={{ background: '#F3F4F6' }} className={`${inter.className} ${arcane.variable}`}>
+        <div className="fixed top-0 left-0 right-0  z-10 flex w-full items-center justify-between bg-white px-8 py-2">
           <div className="font-arcane text-6xl text-amber-500 rounded-md w-16 h-16 px-6">Lejaa</div>
-
           <nav className="flex space-x-8">
             <Link className="text-black" href="/about">About</Link>
             <Link className="text-black" href="/prices">Prices</Link>
@@ -38,6 +37,7 @@ export default function RootLayout({
           <div className="bg-amber-500 rounded-lg w-32 h-12 flex justify-center items-center">Contact Us</div>
         </div>
         {children}
+        <Footer />
       </body>
     </html>
   );
