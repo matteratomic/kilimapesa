@@ -56,7 +56,8 @@ export default function Home() {
         <div className="text-gray-800 font-bold text-5xl mb-8">How savings work on <span className="text-amber-400">Lejaa</span></div>
         <div className="flex w-full space-x-8">
           <div
-            style={{ backgroundImage: "url(https://images.unsplash.com/photo-1592598015799-35c84b09394c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)" }}
+            style={{ 
+              backgroundImage:"url(https://plus.unsplash.com/premium_photo-1661330042351-047e8a9e3cbb?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"}}
             className="relative bg-cover w-1/3 h-72 rounded-lg bg-amber-500 flex items-center p-3">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-300/40 to-amber-500"></div>
             <div className="relative z-1 flex items-center justify-between w-full mt-auto">
@@ -67,7 +68,8 @@ export default function Home() {
             </div>
           </div>
           <div
-            style={{ backgroundImage: "url(https://images.unsplash.com/photo-1592598015799-35c84b09394c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)" }}
+            style={{ 
+              backgroundImage:"url(https://h6etacfy2f.execute-api.us-east-1.amazonaws.com/default/images-resizer?path=prod/Saitarg/1920x1920/1545963492941.422.jpeg)",}}
             className="relative bg-cover w-1/3 h-72 rounded-lg bg-amber-500 flex items-center p-3">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-300/40 to-amber-500"></div>
             <div className="relative z-1 flex items-center justify-between w-full mt-auto">
@@ -78,7 +80,7 @@ export default function Home() {
             </div>
           </div>
           <div
-            style={{ backgroundImage: "url(https://images.unsplash.com/photo-1592598015799-35c84b09394c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)" }}
+            style={{ backgroundImage: "url(https://h6etacfy2f.execute-api.us-east-1.amazonaws.com/default/images-resizer?path=prod/Iwaria/1920x1920/1583798120881.1079.jpeg)" }}
             className="relative bg-cover w-1/3 h-72 rounded-lg bg-amber-500 flex items-center p-3">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-300/40 to-amber-500"></div>
             <div className="relative z-1 flex items-center justify-between w-full mt-auto">
@@ -177,6 +179,6 @@ export default function Home() {
 
       <PricingSection />
 
-    </main>
+    </main >
   );
 }
