@@ -40,7 +40,7 @@ const Footer = () => {
         borderTopRightRadius: 45,
         borderTopLeftRadius: 45,
       }}
-      className="flex flex-col px-4 sm:px-16 pb-32 pt-16 relative z-1 bg-amber-400 sm:min-h-screen w-full overflow-x-hidden">
+      className="flex flex-col px-4 sm:px-16 pb-32 pt-16 relative z-1 bg-amber-500 bg-gradient-to-br from-amber-500 to-amber-300 sm:min-h-screen w-full overflow-x-hidden">
       <div className="flex items-center">
         <h1 className="text-black text-center text-7xl sm:text-[8rem]"
           style={{ fontFamily: "Bebas Neue", lineHeight: 1 }}>

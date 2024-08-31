@@ -30,13 +30,14 @@ export default function Home() {
             {/* <p className="ml-2 text-lg font-semibold text-black">5K</p> */}
             <p className="ml-2 w-3/5 text-sm font-semibold text-black">Join our platform to save,invest, budget and grow</p>
           </div>
-          <h1 className="mt-3 text-7xl font-bold text-black text-center">Turn small steps into <span style={{ lineHeight: 0.8 }} className="text-amber-500  inline-block">big dreams</span></h1>
+          <h1 className="mt-3 text-7xl font-bold text-black text-center">Turn small steps into <p
+            className="pb-2 bg-gradient-to-r inline-block from-amber-300 to-amber-500 bg-clip-text text-transparent">big dreams</p></h1>
 
           <p className="mt-4 text-center text-gray-600 font-medium">
             Whether you're saving for a rainy day, a dream vacation, or your child's education, Lejaa makes it easy. Set your goals, save at your own pace, and watch your savings grow—all from your mobile phone. No bank account needed. Your future starts with just a few taps
           </p>
           <div className="mt-8 flex space-x-3 w-2/3 h-16">
-            <div className="flex items-center justify-center rounded-full p-6 py-3 w-1/2 bg-amber-500 text-lg font-semibold">Sign Up</div>
+            <div className="bg-gradient-to-r from-amber-300 to-amber-500 flex items-center justify-center rounded-full p-6 py-3 w-1/2 bg-amber-500 text-lg font-semibold">Sign Up</div>
             <div className="flex items-center justify-center rounded-full p-6 w-1/2 bg-white text-lg text-black font-semibold">About Us</div>
           </div>
         </div>
@@ -53,11 +54,12 @@ export default function Home() {
       </div>
 
       <div>
-        <div className="text-gray-800 font-bold text-5xl mb-8">How savings work on <span className="text-amber-400">Lejaa</span></div>
+        <div className="text-gray-800 font-bold text-5xl mb-8">How savings work on <span className="text-amber-400 bg-gradient-to-r inline-block from-amber-300 to-amber-500 bg-clip-text text-transparent pb-2">Lejaa</span></div>
         <div className="flex w-full space-x-8">
           <div
-            style={{ 
-              backgroundImage:"url(https://plus.unsplash.com/premium_photo-1661330042351-047e8a9e3cbb?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"}}
+            style={{
+              backgroundImage: "url(https://plus.unsplash.com/premium_photo-1661330042351-047e8a9e3cbb?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
+            }}
             className="relative bg-cover w-1/3 h-72 rounded-lg bg-amber-500 flex items-center p-3">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-300/40 to-amber-500"></div>
             <div className="relative z-1 flex items-center justify-between w-full mt-auto">
@@ -68,8 +70,9 @@ export default function Home() {
             </div>
           </div>
           <div
-            style={{ 
-              backgroundImage:"url(https://h6etacfy2f.execute-api.us-east-1.amazonaws.com/default/images-resizer?path=prod/Saitarg/1920x1920/1545963492941.422.jpeg)",}}
+            style={{
+              backgroundImage: "url(https://h6etacfy2f.execute-api.us-east-1.amazonaws.com/default/images-resizer?path=prod/Saitarg/1920x1920/1545963492941.422.jpeg)",
+            }}
             className="relative bg-cover w-1/3 h-72 rounded-lg bg-amber-500 flex items-center p-3">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-300/40 to-amber-500"></div>
             <div className="relative z-1 flex items-center justify-between w-full mt-auto">
@@ -95,7 +98,7 @@ export default function Home() {
         </div>
       </div>
 
-      <InfiniteSlideText/>
+      <InfiniteSlideText />
 
       <section className="text-gray-600 bg-white rounded-2xl body-font mt-16">
         <div className="container px-5 py-24 mx-auto">
