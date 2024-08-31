@@ -84,31 +84,45 @@ const Dashboard = (props: {}) => {
               3.14%
             </div>
           </div>
-          <div className="relative flex flex-col items-center justify-center bg-white shadow-md w-1/2 h-full rounded-2xl">
-            <p className="text-sm text-gray-800 font-semibold">Expenses</p>
-            <p className="text-4xl font-bold text-gray-800 my-4"><span className="text-lg">KES</span> 13,102</p>
-            <div className="flex items-center justify-center bg-green-100 font-bold text-sm text-green-600 rounded-2xl p-1 px-2">
-              <LucideArrowUp className="w-4 h-4 text-green-600 shrink-0" />
-              3.14%
+          <div className="relative flex flex-col items-center justify-center p-4 bg-white shadow-md w-1/2 h-full rounded-2xl">
+            <p className="text-sm text-gray-800 font-semibold mr-auto">Expenses</p>
+            <div className="flex ml-8">
+              <div className="flex items-center justify-center">
+                <div className="absolute text-gray-800 font-bold text-2xl">1,376</div>
+                <PieChart
+                  width={150} height={150}>
+                  <Pie
+                    data={data}
+                    cx={"50%"}
+                    cy={"50%"}
+                    innerRadius={60}
+                    outerRadius={75}
+
+                    fill="#8884d8"
+                    paddingAngle={5}
+                    dataKey="value"
+                  >
+                    {data.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    ))}
+                  </Pie>
+                </PieChart>
+              </div>
+              <div className="ml-8 flex flex-col space-y-3 items-start">
+                <div className="flex items-center justify-center text-gray-800 text-sm space-x-2">
+                  <div className="animate-pulse bg-[#0088FE] rounded-full w-2 h-2 mr-1"></div>Rent
+                </div>
+                <div className="flex items-center justify-center text-gray-800 text-sm space-x-2">
+                  <div className="animate-pulse bg-[#00C49F] rounded-full w-2 h-2 mr-1"></div>Food
+                </div>
+                <div className="flex items-center justify-center text-gray-800 text-sm space-x-2">
+                  <div className="animate-pulse bg-[#FFBB28] rounded-full w-2 h-2 mr-1"></div>Electricity
+                </div>
+                <div className="flex items-center justify-center text-gray-800 text-sm space-x-2">
+                  <div className="animate-pulse bg-[#FF8042] rounded-full w-2 h-2 mr-1"></div>Shopping
+                </div>
+              </div>
             </div>
-            {/* <PieChart width={800} height={400}  */}
-            {/*   // onMouseEnter={this.onPieEnter} */}
-            {/* > */}
-            {/*   <Pie */}
-            {/*     data={data} */}
-            {/*     cx={120} */}
-            {/*     cy={200} */}
-            {/*     innerRadius={60} */}
-            {/*     outerRadius={80} */}
-            {/*     fill="#8884d8" */}
-            {/*     paddingAngle={5} */}
-            {/*     dataKey="value" */}
-            {/*   > */}
-            {/*     {data.map((entry, index) => ( */}
-            {/*       <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} /> */}
-            {/*     ))} */}
-            {/*   </Pie> */}
-            {/* </PieChart> */}
           </div>
         </div>
 
